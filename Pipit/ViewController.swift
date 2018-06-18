@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Pipit
 //
-//  Created by Nick Thompson on 6/12/18.
+//  Created by Nick Thompson on 6/25/18.
 //  Copyright © 2018 Nick Thompson. All rights reserved.
 //
 
@@ -11,24 +11,10 @@ import AVKit
 
 class ViewController: NSViewController {
 
-    @IBOutlet weak var player: AVPlayerView!
-    
-    private var inPip = false
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear() {
-        super.viewDidAppear()
-        
-        if !self.inPip {
-            
-        }
     }
 
     override var representedObject: Any? {
@@ -53,9 +39,9 @@ class ViewController: NSViewController {
         
         if let url = URL(string: VideoManager.execCommand(args: ["-f", "mp4", "-g", strurl]))
         {
-            self.player.player = AVPlayer(url: url)
-            
-            self.player.player?.play()
+//            self.player.player = AVPlayer(url: url)
+//            
+//            self.player.player?.play()
             pip.presentAsPicture(inPicture: self)
         }
     }

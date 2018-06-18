@@ -7,105 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		019608D020D08DAE001F2EA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019608CF20D08DAE001F2EA6 /* AppDelegate.swift */; };
-		019608D220D08DAE001F2EA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019608D120D08DAE001F2EA6 /* ViewController.swift */; };
-		019608D420D08DB0001F2EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019608D320D08DB0001F2EA6 /* Assets.xcassets */; };
-		019608D720D08DB0001F2EA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019608D520D08DB0001F2EA6 /* Main.storyboard */; };
-		019608E220D08EB8001F2EA6 /* PIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019608E120D08EB8001F2EA6 /* PIP.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		019608EA20D0A2FC001F2EA6 /* PIPVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019608E820D0A2FC001F2EA6 /* PIPVideoViewController.swift */; };
-		019608EB20D0A2FC001F2EA6 /* PIPVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 019608E920D0A2FC001F2EA6 /* PIPVideoViewController.xib */; };
-		019BDFC520D0BBB1002A0AFC /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BDFC420D0BBB1002A0AFC /* VideoManager.swift */; };
-		019BDFC720D0BF78002A0AFC /* youtube-dl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 019BDFC220D0BB4D002A0AFC /* youtube-dl */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		01AA04AD20E13CB000ED12B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA04AC20E13CB000ED12B7 /* AppDelegate.swift */; };
+		01AA04AF20E13CB000ED12B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA04AE20E13CB000ED12B7 /* ViewController.swift */; };
+		01AA04B120E13CB200ED12B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AA04B020E13CB200ED12B7 /* Assets.xcassets */; };
+		01AA04B420E13CB200ED12B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AA04B220E13CB200ED12B7 /* Main.storyboard */; };
+		01AA04C020E13D2800ED12B7 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA04BE20E13D2700ED12B7 /* VideoManager.swift */; };
+		01AA04C420E13D2800ED12B7 /* PIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AA04C320E13D2800ED12B7 /* PIP.framework */; };
+		01AA04D320E13D2800ED12B7 /* youtube-dl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AA04D120E13D2800ED12B7 /* youtube-dl */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		019BDFC620D0BF70002A0AFC /* CopyFiles */ = {
+		01AA04C520E13D2800ED12B7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				019BDFC720D0BF78002A0AFC /* youtube-dl in CopyFiles */,
+				01AA04D320E13D2800ED12B7 /* youtube-dl in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		019608CC20D08DAE001F2EA6 /* Pipit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pipit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		019608CF20D08DAE001F2EA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		019608D120D08DAE001F2EA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		019608D320D08DB0001F2EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		019608D620D08DB0001F2EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		019608D820D08DB0001F2EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		019608D920D08DB0001F2EA6 /* Pipit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pipit.entitlements; sourceTree = "<group>"; };
-		019608E120D08EB8001F2EA6 /* PIP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PIP.framework; path = ../../../../../System/Library/PrivateFrameworks/PIP.framework; sourceTree = "<group>"; };
-		019608E520D09CF7001F2EA6 /* Pipit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pipit-Bridging-Header.h"; sourceTree = "<group>"; };
-		019608E820D0A2FC001F2EA6 /* PIPVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPVideoViewController.swift; sourceTree = "<group>"; };
-		019608E920D0A2FC001F2EA6 /* PIPVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PIPVideoViewController.xib; sourceTree = "<group>"; };
-		019BDFC220D0BB4D002A0AFC /* youtube-dl */ = {isa = PBXFileReference; lastKnownFileType = file; name = "youtube-dl"; path = "Executables/youtube-dl"; sourceTree = SOURCE_ROOT; };
-		019BDFC420D0BBB1002A0AFC /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		01AA04A920E13CB000ED12B7 /* Pipit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pipit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01AA04AC20E13CB000ED12B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01AA04AE20E13CB000ED12B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01AA04B020E13CB200ED12B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01AA04B320E13CB200ED12B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01AA04B520E13CB200ED12B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01AA04B620E13CB200ED12B7 /* Pipit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pipit.entitlements; sourceTree = "<group>"; };
+		01AA04BE20E13D2700ED12B7 /* VideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		01AA04C320E13D2800ED12B7 /* PIP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PIP.framework; path = /System/Library/PrivateFrameworks/PIP.framework; sourceTree = "<absolute>"; };
+		01AA04D120E13D2800ED12B7 /* youtube-dl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "youtube-dl"; sourceTree = "<group>"; };
+		01AA04FB20E13D2800ED12B7 /* Pipit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pipit-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		019608C920D08DAE001F2EA6 /* Frameworks */ = {
+		01AA04A620E13CB000ED12B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019608E220D08EB8001F2EA6 /* PIP.framework in Frameworks */,
+				01AA04C420E13D2800ED12B7 /* PIP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		019608C320D08DAE001F2EA6 = {
+		01AA04A020E13CB000ED12B7 = {
 			isa = PBXGroup;
 			children = (
-				019608CE20D08DAE001F2EA6 /* Pipit */,
-				019608CD20D08DAE001F2EA6 /* Products */,
-				019BDFC120D0BAFB002A0AFC /* Executables */,
-				019608E020D08EB7001F2EA6 /* Frameworks */,
+				01AA04D020E13D2800ED12B7 /* Executables */,
+				01AA04AB20E13CB000ED12B7 /* Pipit */,
+				01AA04AA20E13CB000ED12B7 /* Products */,
+				01AA04C220E13D2800ED12B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		019608CD20D08DAE001F2EA6 /* Products */ = {
+		01AA04AA20E13CB000ED12B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				019608CC20D08DAE001F2EA6 /* Pipit.app */,
+				01AA04A920E13CB000ED12B7 /* Pipit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		019608CE20D08DAE001F2EA6 /* Pipit */ = {
+		01AA04AB20E13CB000ED12B7 /* Pipit */ = {
 			isa = PBXGroup;
 			children = (
-				019608CF20D08DAE001F2EA6 /* AppDelegate.swift */,
-				019608D120D08DAE001F2EA6 /* ViewController.swift */,
-				019608D320D08DB0001F2EA6 /* Assets.xcassets */,
-				019608D520D08DB0001F2EA6 /* Main.storyboard */,
-				019608D820D08DB0001F2EA6 /* Info.plist */,
-				019608D920D08DB0001F2EA6 /* Pipit.entitlements */,
-				019608E520D09CF7001F2EA6 /* Pipit-Bridging-Header.h */,
-				019608E820D0A2FC001F2EA6 /* PIPVideoViewController.swift */,
-				019608E920D0A2FC001F2EA6 /* PIPVideoViewController.xib */,
-				019BDFC420D0BBB1002A0AFC /* VideoManager.swift */,
+				01AA04BE20E13D2700ED12B7 /* VideoManager.swift */,
+				01AA04AC20E13CB000ED12B7 /* AppDelegate.swift */,
+				01AA04AE20E13CB000ED12B7 /* ViewController.swift */,
+				01AA04B020E13CB200ED12B7 /* Assets.xcassets */,
+				01AA04B220E13CB200ED12B7 /* Main.storyboard */,
+				01AA04B520E13CB200ED12B7 /* Info.plist */,
+				01AA04B620E13CB200ED12B7 /* Pipit.entitlements */,
+				01AA04FB20E13D2800ED12B7 /* Pipit-Bridging-Header.h */,
 			);
 			path = Pipit;
 			sourceTree = "<group>";
 		};
-		019608E020D08EB7001F2EA6 /* Frameworks */ = {
+		01AA04C220E13D2800ED12B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				019608E120D08EB8001F2EA6 /* PIP.framework */,
+				01AA04C320E13D2800ED12B7 /* PIP.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		019BDFC120D0BAFB002A0AFC /* Executables */ = {
+		01AA04D020E13D2800ED12B7 /* Executables */ = {
 			isa = PBXGroup;
 			children = (
-				019BDFC220D0BB4D002A0AFC /* youtube-dl */,
+				01AA04D120E13D2800ED12B7 /* youtube-dl */,
 			);
 			path = Executables;
 			sourceTree = "<group>";
@@ -113,15 +107,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		019608CB20D08DAE001F2EA6 /* Pipit */ = {
+		01AA04A820E13CB000ED12B7 /* Pipit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 019608DC20D08DB0001F2EA6 /* Build configuration list for PBXNativeTarget "Pipit" */;
+			buildConfigurationList = 01AA04B920E13CB200ED12B7 /* Build configuration list for PBXNativeTarget "Pipit" */;
 			buildPhases = (
-				019608DF20D08E32001F2EA6 /* Increment Build Number */,
-				019608C820D08DAE001F2EA6 /* Sources */,
-				019608C920D08DAE001F2EA6 /* Frameworks */,
-				019608CA20D08DAE001F2EA6 /* Resources */,
-				019BDFC620D0BF70002A0AFC /* CopyFiles */,
+				01AA04A520E13CB000ED12B7 /* Sources */,
+				01AA04A620E13CB000ED12B7 /* Frameworks */,
+				01AA04A720E13CB000ED12B7 /* Resources */,
+				01AA04C520E13D2800ED12B7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -129,22 +122,22 @@
 			);
 			name = Pipit;
 			productName = Pipit;
-			productReference = 019608CC20D08DAE001F2EA6 /* Pipit.app */;
+			productReference = 01AA04A920E13CB000ED12B7 /* Pipit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		019608C420D08DAE001F2EA6 /* Project object */ = {
+		01AA04A120E13CB000ED12B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Nick Thompson";
 				TargetAttributes = {
-					019608CB20D08DAE001F2EA6 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 0940;
+					01AA04A820E13CB000ED12B7 = {
+						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -153,7 +146,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 019608C720D08DAE001F2EA6 /* Build configuration list for PBXProject "Pipit" */;
+			buildConfigurationList = 01AA04A420E13CB000ED12B7 /* Build configuration list for PBXProject "Pipit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -161,65 +154,46 @@
 				en,
 				Base,
 			);
-			mainGroup = 019608C320D08DAE001F2EA6;
-			productRefGroup = 019608CD20D08DAE001F2EA6 /* Products */;
+			mainGroup = 01AA04A020E13CB000ED12B7;
+			productRefGroup = 01AA04AA20E13CB000ED12B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				019608CB20D08DAE001F2EA6 /* Pipit */,
+				01AA04A820E13CB000ED12B7 /* Pipit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		019608CA20D08DAE001F2EA6 /* Resources */ = {
+		01AA04A720E13CB000ED12B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019608EB20D0A2FC001F2EA6 /* PIPVideoViewController.xib in Resources */,
-				019608D420D08DB0001F2EA6 /* Assets.xcassets in Resources */,
-				019608D720D08DB0001F2EA6 /* Main.storyboard in Resources */,
+				01AA04B120E13CB200ED12B7 /* Assets.xcassets in Resources */,
+				01AA04B420E13CB200ED12B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		019608DF20D08E32001F2EA6 /* Increment Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Increment Build Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		019608C820D08DAE001F2EA6 /* Sources */ = {
+		01AA04A520E13CB000ED12B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019608D220D08DAE001F2EA6 /* ViewController.swift in Sources */,
-				019608D020D08DAE001F2EA6 /* AppDelegate.swift in Sources */,
-				019608EA20D0A2FC001F2EA6 /* PIPVideoViewController.swift in Sources */,
-				019BDFC520D0BBB1002A0AFC /* VideoManager.swift in Sources */,
+				01AA04AF20E13CB000ED12B7 /* ViewController.swift in Sources */,
+				01AA04AD20E13CB000ED12B7 /* AppDelegate.swift in Sources */,
+				01AA04C020E13D2800ED12B7 /* VideoManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		019608D520D08DB0001F2EA6 /* Main.storyboard */ = {
+		01AA04B220E13CB200ED12B7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				019608D620D08DB0001F2EA6 /* Base */,
+				01AA04B320E13CB200ED12B7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -227,7 +201,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		019608DA20D08DB0001F2EA6 /* Debug */ = {
+		01AA04B720E13CB200ED12B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -287,7 +261,7 @@
 			};
 			name = Debug;
 		};
-		019608DB20D08DB0001F2EA6 /* Release */ = {
+		01AA04B820E13CB200ED12B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -340,7 +314,7 @@
 			};
 			name = Release;
 		};
-		019608DD20D08DB0001F2EA6 /* Debug */ = {
+		01AA04BA20E13CB200ED12B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -353,7 +327,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = guru.nickthompson.Pipit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pipit/Pipit-Bridging-Header.h";
@@ -366,7 +339,7 @@
 			};
 			name = Debug;
 		};
-		019608DE20D08DB0001F2EA6 /* Release */ = {
+		01AA04BB20E13CB200ED12B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -379,7 +352,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = guru.nickthompson.Pipit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pipit/Pipit-Bridging-Header.h";
@@ -394,25 +366,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		019608C720D08DAE001F2EA6 /* Build configuration list for PBXProject "Pipit" */ = {
+		01AA04A420E13CB000ED12B7 /* Build configuration list for PBXProject "Pipit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				019608DA20D08DB0001F2EA6 /* Debug */,
-				019608DB20D08DB0001F2EA6 /* Release */,
+				01AA04B720E13CB200ED12B7 /* Debug */,
+				01AA04B820E13CB200ED12B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		019608DC20D08DB0001F2EA6 /* Build configuration list for PBXNativeTarget "Pipit" */ = {
+		01AA04B920E13CB200ED12B7 /* Build configuration list for PBXNativeTarget "Pipit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				019608DD20D08DB0001F2EA6 /* Debug */,
-				019608DE20D08DB0001F2EA6 /* Release */,
+				01AA04BA20E13CB200ED12B7 /* Debug */,
+				01AA04BB20E13CB200ED12B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 019608C420D08DAE001F2EA6 /* Project object */;
+	rootObject = 01AA04A120E13CB000ED12B7 /* Project object */;
 }
