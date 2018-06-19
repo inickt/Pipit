@@ -10,12 +10,12 @@ import Cocoa
 
 class VideoManager {
 
+    static func getURL(url: URL) -> URL? {
+        return URL(string: self.execCommand(args: ["-f", "mp4", "-g", url.absoluteString]))
+    }
     
-    
-
-    static func execCommand(args: [String]) -> String {
-        
-        guard var execURL = Bundle.main.executableURL else {
+    private static func execCommand(args: [String]) -> String {
+        guard let execURL = Bundle.main.executableURL else {
             return ""
         }
         

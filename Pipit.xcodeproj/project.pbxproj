@@ -14,6 +14,7 @@
 		01AA04C020E13D2800ED12B7 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA04BE20E13D2700ED12B7 /* VideoManager.swift */; };
 		01AA04C420E13D2800ED12B7 /* PIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AA04C320E13D2800ED12B7 /* PIP.framework */; };
 		01AA04D320E13D2800ED12B7 /* youtube-dl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01AA04D120E13D2800ED12B7 /* youtube-dl */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		01AA04FF20E13D2800ED12B7 /* PIPVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA04FE20E13D2800ED12B7 /* PIPVideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		01AA04C320E13D2800ED12B7 /* PIP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PIP.framework; path = /System/Library/PrivateFrameworks/PIP.framework; sourceTree = "<absolute>"; };
 		01AA04D120E13D2800ED12B7 /* youtube-dl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "youtube-dl"; sourceTree = "<group>"; };
 		01AA04FB20E13D2800ED12B7 /* Pipit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pipit-Bridging-Header.h"; sourceTree = "<group>"; };
+		01AA04FE20E13D2800ED12B7 /* PIPVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPVideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				01AA04B520E13CB200ED12B7 /* Info.plist */,
 				01AA04B620E13CB200ED12B7 /* Pipit.entitlements */,
 				01AA04FB20E13D2800ED12B7 /* Pipit-Bridging-Header.h */,
+				01AA04FE20E13D2800ED12B7 /* PIPVideoViewController.swift */,
 			);
 			path = Pipit;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			files = (
 				01AA04AF20E13CB000ED12B7 /* ViewController.swift in Sources */,
 				01AA04AD20E13CB000ED12B7 /* AppDelegate.swift in Sources */,
+				01AA04FF20E13D2800ED12B7 /* PIPVideoViewController.swift in Sources */,
 				01AA04C020E13D2800ED12B7 /* VideoManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +261,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/nick/Developer/GitHub/Pipit/Pipit/PIP/PIPViewController.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -310,6 +315,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/nick/Developer/GitHub/Pipit/Pipit/PIP/PIPViewController.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;

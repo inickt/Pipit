@@ -26,6 +26,8 @@ class ViewController: NSViewController {
     @IBAction func buttonPressed(_ sender: Any) {
         
         let pip = PIPViewController()
+        
+        
 //
 //        let vc = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PIPVideoViewController")) as! PIPVideoViewController
         
@@ -37,13 +39,13 @@ class ViewController: NSViewController {
 //
 //        self.player.player?.play()
         
-        if let url = URL(string: VideoManager.execCommand(args: ["-f", "mp4", "-g", strurl]))
-        {
-//            self.player.player = AVPlayer(url: url)
-//            
-//            self.player.player?.play()
-            pip.presentAsPicture(inPicture: self)
-        }
+//        if let url = URL(string: VideoManager.execCommand(args: ["-f", "mp4", "-g", strurl]))
+//        {
+////            self.player.player = AVPlayer(url: url)
+////
+////            self.player.player?.play()
+//            pip.presentAsPicture(inPicture: self)
+//        }
     }
 }
 
