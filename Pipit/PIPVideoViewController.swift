@@ -29,13 +29,14 @@ class PIPVideoViewController: NSViewController, PIPViewControllerDelegate {
         self.view.autoresizingMask = [.width, .height]
     }
     
-    func play(url: URL, aspectRatio: NSSize?) {
+    func play(url: URL, aspectRatio: NSSize?, startTime: CMTime?) {
         pip.presentAsPicture(inPicture: self)
         
         let player = AVPlayer(url: url)
         self.playerView.player = player
         
         if let aspectRatio = aspectRatio { pip.aspectRatio = aspectRatio }
+        if let startTime = startTime { player.seek(to: startTime) }
         pip.playing = true
         player.play()
     }

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import os
 import AVKit
 
 @NSApplicationMain
@@ -34,25 +35,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        os_log("Pipit is terminating.")
     }
 
     func application(_ application: NSApplication, open urls: [URL]) {
+        guard urls.count == 1, urls[0].scheme == "pipit" else { return }
         
-        guard urls.count == 1 else { return }
+        os_log("Opening URL: %@", log: OSLog.default, type: .debug, urls[0].absoluteString)
         
-        let urlString = urls[0].absoluteString
+        guard let urlComponents = URLComponents(url: urls[0], resolvingAgainstBaseURL: false) else { return }
+        let queryItems = urlComponents.queryItems
         
-        if urlString.contains("pipit://weblink?url=") {
-            
-            if let webURL = urlString.replacingOccurrences(of: "pipit://weblink?url=", with: "").removingPercentEncoding {
-                if let url = URL(string: webURL) {
-                    if let url = VideoManager.getURL(url: url) {
-                        let pipVideoVC = PIPVideoViewController.make()
-                        pipVideoVC?.play(url: url, aspectRatio: nil)
-                    }
-                }
-            }   
+        os_log("URL parameters:\n%@", log: OSLog.default, type: .debug, queryItems?.map({ $0.description }).joined(separator: "\n") ?? "")
+        
+        guard let sourceURLString = queryItems?.first(where: { $0.name == "url" })?.value else { return }
+        
+        var startTime: CMTime? = nil
+        if let startTimeString = queryItems?.first(where: { $0.name == "time" })?.value,
+            let startTimeDouble = Double.init(startTimeString) {
+            startTime = CMTime(seconds: startTimeDouble - 0.5, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
+        }
+        
+        if let url = URL(string: sourceURLString) {
+            if let url = VideoManager.getURL(url: url) {
+                let pipVideoVC = PIPVideoViewController.make()
+                pipVideoVC?.play(url: url, aspectRatio: nil, startTime: startTime)
+            }
         }
     }
     
@@ -63,7 +71,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let startURL = URL(string: answer) {
             if let url = VideoManager.getURL(url: startURL) {
                 let pipVideoVC = PIPVideoViewController.make()
-                pipVideoVC?.play(url: url, aspectRatio: nil)
+                pipVideoVC?.play(url: url, aspectRatio: nil, startTime: nil)
+
             }
         }
     }
