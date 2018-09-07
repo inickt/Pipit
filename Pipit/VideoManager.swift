@@ -10,8 +10,10 @@ import Cocoa
 
 class VideoManager {
 
-    static func getURL(url: URL) -> URL? {
-        return URL(string: self.execCommand(args: ["-f", "mp4", "-g", url.absoluteString]))
+    static func getURL(url: URL, completion: @escaping (URL?) -> ()) {
+        DispatchQueue.global(qos: .utility).async {
+            completion(URL(string: self.execCommand(args: ["-f", "mp4", "-g", url.absoluteString])))
+        }
     }
     
     private static func execCommand(args: [String]) -> String {

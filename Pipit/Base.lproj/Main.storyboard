@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.AVKitIBPlugin" version="14109"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="14113"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -714,8 +716,45 @@
                             <avPlayerView controlsStyle="none" videoGravity="resizeAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERE-oE-qFW">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                             </avPlayerView>
+                            <visualEffectView wantsLayer="YES" appearanceType="vibrantDark" blendingMode="withinWindow" material="dark" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="hl2-ri-AM7">
+                                <rect key="frame" x="160" y="85" width="130" height="130"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zi6-3p-rUF">
+                                        <rect key="frame" x="49" y="38" width="33" height="54"/>
+                                        <subviews>
+                                            <progressIndicator wantsLayer="YES" maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="QlL-Js-ksJ">
+                                                <rect key="frame" x="1" y="22" width="32" height="32"/>
+                                            </progressIndicator>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Svw-fB-rOY">
+                                                <rect key="frame" x="-2" y="0.0" width="37" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="eM3-Sj-8Fw">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zi6-3p-rUF" firstAttribute="centerY" secondItem="hl2-ri-AM7" secondAttribute="centerY" id="9K9-YU-Qfq"/>
+                                    <constraint firstAttribute="width" constant="130" id="HbM-Fb-NcZ"/>
+                                    <constraint firstAttribute="width" secondItem="hl2-ri-AM7" secondAttribute="height" multiplier="1:1" id="Zwm-rH-PhC"/>
+                                    <constraint firstItem="zi6-3p-rUF" firstAttribute="centerX" secondItem="hl2-ri-AM7" secondAttribute="centerX" id="bwj-Dc-Emf"/>
+                                </constraints>
+                            </visualEffectView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="hl2-ri-AM7" firstAttribute="centerY" secondItem="YQS-3t-fwY" secondAttribute="centerY" id="6AX-OU-EAk"/>
+                            <constraint firstItem="hl2-ri-AM7" firstAttribute="centerX" secondItem="YQS-3t-fwY" secondAttribute="centerX" id="96o-LX-bGh"/>
                             <constraint firstAttribute="trailing" secondItem="ERE-oE-qFW" secondAttribute="trailing" id="Dji-EX-ptR"/>
                             <constraint firstItem="ERE-oE-qFW" firstAttribute="top" secondItem="YQS-3t-fwY" secondAttribute="top" id="eFp-YF-Feo"/>
                             <constraint firstAttribute="bottom" secondItem="ERE-oE-qFW" secondAttribute="bottom" id="eY3-7A-RjN"/>
@@ -723,6 +762,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="infoIndicator" destination="QlL-Js-ksJ" id="Zmw-yI-dcA"/>
+                        <outlet property="infoLabel" destination="Svw-fB-rOY" id="SYS-XJ-SQr"/>
+                        <outlet property="infoView" destination="hl2-ri-AM7" id="O6m-FC-wkg"/>
                         <outlet property="playerView" destination="ERE-oE-qFW" id="1mr-W5-D1P"/>
                     </connections>
                 </viewController>

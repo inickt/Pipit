@@ -57,9 +57,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         if let url = URL(string: sourceURLString) {
-            if let url = VideoManager.getURL(url: url) {
-                let pipVideoVC = PIPVideoViewController.make()
-                pipVideoVC?.play(url: url, aspectRatio: nil, startTime: startTime)
+            let pipVideoVC = PIPVideoViewController.make()
+            pipVideoVC?.present()
+            
+            VideoManager.getURL(url: url) { url in
+                if let url = url {
+                    pipVideoVC?.play(url: url, aspectRatio: nil, startTime: startTime)
+                }
             }
         }
     }
@@ -69,10 +73,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         print(answer)
         if let startURL = URL(string: answer) {
-            if let url = VideoManager.getURL(url: startURL) {
-                let pipVideoVC = PIPVideoViewController.make()
-                pipVideoVC?.play(url: url, aspectRatio: nil, startTime: nil)
-
+            VideoManager.getURL(url: startURL) { url in
+                if let url = url {
+                    let pipVideoVC = PIPVideoViewController.make()
+                    pipVideoVC?.present()
+                    pipVideoVC?.play(url: url, aspectRatio: nil, startTime: nil)
+                }
             }
         }
     }

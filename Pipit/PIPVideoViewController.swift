@@ -15,7 +15,11 @@ class PIPVideoViewController: NSViewController, PIPViewControllerDelegate {
         return NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PIPVideo")) as? PIPVideoViewController
     }
     
-    @IBOutlet private weak var playerView: AVPlayerView!
+    @IBOutlet private var playerView: AVPlayerView!
+    @IBOutlet var infoView: NSVisualEffectView!
+    @IBOutlet var infoIndicator: NSProgressIndicator!
+    @IBOutlet var infoLabel: NSTextField!
+    
     private var piping = false
     
     lazy var pip: PIPViewController = {
@@ -27,10 +31,16 @@ class PIPVideoViewController: NSViewController, PIPViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.autoresizingMask = [.width, .height]
+        
+        self.infoView.layer?.cornerRadius = 10
+        self.infoIndicator.startAnimation(nil)
+    }
+    
+    func present() {
+        pip.presentAsPicture(inPicture: self)
     }
     
     func play(url: URL, aspectRatio: NSSize?, startTime: CMTime?) {
-        pip.presentAsPicture(inPicture: self)
         
         let player = AVPlayer(url: url)
         self.playerView.player = player
@@ -38,7 +48,22 @@ class PIPVideoViewController: NSViewController, PIPViewControllerDelegate {
         if let aspectRatio = aspectRatio { pip.aspectRatio = aspectRatio }
         if let startTime = startTime { player.seek(to: startTime) }
         pip.playing = true
+        
+        
+        player.addObserver(self, forKeyPath: "status", options: .new, context: nil)
         player.play()
+        
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let player = object as? AVPlayer {
+            if player.status == .readyToPlay {
+                NSAnimationContext.runAnimationGroup({ context in
+                    context.duration = 0.5
+                    self.infoView.animator().alphaValue = 0.0
+                })
+            }
+        }
     }
     
     // MARK: - PIPViewControllerDelegate
